@@ -1,0 +1,17 @@
+<countries>
+    <country country_name="Canada">
+        <city>c1</city>
+        <city>c2</city>
+        <city>c3</city>
+    </country>
+    <country country_name="India">
+        <city>i1</city>
+        <city>i2</city>
+        <city>i3</city>
+    </country>
+    <country country_name="USA">
+        <city>u1</city>
+        <city>u2</city>
+        <city>u3</city>
+    </country>
+</countries>
