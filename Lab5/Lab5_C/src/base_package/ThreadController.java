@@ -1,0 +1,82 @@
+package base_package;
+
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.concurrent.CyclicBarrier;
+
+public class ThreadController {
+    private static final int ARR_SIZE = 10;
+    private CyclicBarrier barrier;
+    private ArrayList<ArrayList<Integer>> number_arrays;
+    private ArrayList<Integer> summs;
+    private ArrayThread thread1;
+    private ArrayThread thread2;
+    private ArrayThread thread3;
+
+    ThreadController() {
+        this.number_arrays = new ArrayList<>(3);
+        this.number_arrays.add(initRandomArray(ARR_SIZE));
+        this.number_arrays.add(initRandomArray(ARR_SIZE));
+        this.number_arrays.add(initRandomArray(ARR_SIZE));
+
+        System.out.println(this.number_arrays.get(0) + "\n" + this.number_arrays.get(1) + "\n" + this.number_arrays.get(2));
+
+        this.summs = new ArrayList<>(3);
+        for(int i = 0; i < 3; i++) summs.add(calculateSum(i));
+
+        this.barrier = new CyclicBarrier(3, new ViewProgress(summs));
+
+        this.thread1 = new ArrayThread(barrier, number_arrays.get(0), summs, 0);
+        this.thread2 = new ArrayThread(barrier, number_arrays.get(1), summs, 1);
+        this.thread3 = new ArrayThread(barrier, number_arrays.get(2), summs, 2);
+        this.thread1.setDaemon(true);
+        this.thread2.setDaemon(true);
+        this.thread3.setDaemon(true);
+    }
+
+    private ArrayList<Integer> initRandomArray(int size) {
+        ArrayList<Integer> list = new ArrayList<>(size);
+        Random random = new Random();
+        for (int i = 0; i < size; i++) {
+            list.add(random.nextInt(10));
+        }
+        return list;
+    }
+
+    private Integer calculateSum(Integer index) {
+        int tmpSum = 0;
+        for (int i = 0; i < ARR_SIZE; i++){
+            tmpSum += number_arrays.get(index).get(i);
+        }
+        return tmpSum;
+    }
+
+    public void beginCount() {
+        System.out.println("Begin!");
+
+        ViewProgress a = new ViewProgress(summs);
+        a.start();
+
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        this.thread1.start();
+        this.thread2.start();
+        this.thread3.start();
+
+        try {
+            thread1.join();
+            thread2.join();
+            thread3.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("End!");
+
+
+    }
+}
