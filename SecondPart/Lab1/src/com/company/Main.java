@@ -48,7 +48,7 @@ public class Main {
             Node node = nList.item(temp);
             if (node.getNodeType() == Node.ELEMENT_NODE)
             {
-                if (!firstTime) System.out.println(node.getNodeName() + " " + node.getTextContent());
+                if (!firstTime) System.out.println("  " + node.getNodeName() + " " + node.getTextContent());
                 if (node.hasAttributes()) {
                     NamedNodeMap nodeMap = node.getAttributes();
                     for (int i = 0; i < nodeMap.getLength(); i++)
