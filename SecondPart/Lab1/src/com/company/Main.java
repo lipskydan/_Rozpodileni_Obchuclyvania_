@@ -13,54 +13,32 @@ public class Main {
 
     public static void main(String[] args) {
 
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = null;
-        try {
-            builder = factory.newDocumentBuilder();
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        }
+        Worldmap a = new Worldmap("map.xml");
+        a.loadFromFile();
 
-        Document document = null;
-        try {
-            document = builder.parse(new File("countries.xml"));
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        a.showCountries();
+        a.showCities();
 
-        document.getDocumentElement().normalize();
+        a.addCountry(3, "Белоруссия");
+        a.addCity(6, "Минск",true, 1700000,3);
+        a.addCity(7, "Витебск",false, 3000000,3);
 
-        Element root = document.getDocumentElement();
-        System.out.println(root.getNodeName());
 
-        NodeList nList = document.getElementsByTagName("country");
-        System.out.println("============================");
+        System.out.println("\n----------------------------------------------------------");
+        System.out.println("----------------------------------------------------------\n");
 
-        visitChildNodes(nList,true);
+        a.showCountries();
+        a.showCities();
+
+        a.saveToFile();
+
+
+
+
+
     }
 
-    private static void visitChildNodes(NodeList nList, boolean firstTime)
-    {
-        for (int temp = 0; temp < nList.getLength(); temp++)
-        {
-            Node node = nList.item(temp);
-            if (node.getNodeType() == Node.ELEMENT_NODE)
-            {
-                if (!firstTime) System.out.println("  " + node.getNodeName() + " " + node.getTextContent());
-                if (node.hasAttributes()) {
-                    NamedNodeMap nodeMap = node.getAttributes();
-                    for (int i = 0; i < nodeMap.getLength(); i++)
-                    {
-                        Node tempNode = nodeMap.item(i);
-                        System.out.println(tempNode.getNodeName()+ " " + tempNode.getNodeValue());
-                    }
-                    if (node.hasChildNodes()) {
-                        visitChildNodes(node.getChildNodes(),false);
-                    }
-                }
-            }
-        }
-    }
 }
+
+
+
