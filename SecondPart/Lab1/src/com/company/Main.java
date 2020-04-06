@@ -1,18 +1,50 @@
 package com.company;
 
-import org.w3c.dom.*;
-import org.xml.sax.SAXException;
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.File;
+import java.awt.*;
 import java.io.IOException;
 
-public class Main {
+public class Main extends Application {
 
     public static void main(String[] args) {
+        launch(args);
 
+    }
+
+    @Override
+    public void start(Stage primaryStage) {
+        StackPane root = new StackPane();
+        primaryStage.setTitle("Labrasp2 Lab1");
+        Button btn = new Button();
+
+        btn.setText("start demonstration");
+        btn.setOnAction(event -> {
+            btn.setVisible(false);
+            Label label = new Label("Look at console ;)");
+            root.getChildren().add(label);
+           alg();
+        });
+
+        root.getChildren().add(btn);
+        primaryStage.setScene(new Scene(root, 350, 350));
+        primaryStage.show();
+
+
+    }
+
+
+    void alg(){
         Worldmap a = new Worldmap("map.xml");
         a.loadFromFile();
 
@@ -63,10 +95,7 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
-
 }
 
 
