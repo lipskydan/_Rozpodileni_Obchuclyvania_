@@ -188,7 +188,7 @@ public class Worldmap {
     // Удалить страну
     public void deleteCountry(int code) {
 
-        for(int i=0; i < cities.size();i++) deleteCity(code);
+       for(int i=0; i < cities.size();i++) deleteCity(code);
 
         for (Country a: countries) {
             if (a.code == code){

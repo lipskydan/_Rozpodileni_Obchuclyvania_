@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
 <map>
     <country id="1" name="Россия">
         <city count="11000000" id="1" iscap="false" name="Москва"/>
@@ -9,8 +10,10 @@
         <city count="3000000" id="4" iscap="false" name="Киев"/>
         <city count="400000" id="5" iscap="false" name="Севастополь"/>
     </country>
-    <country id="3" name="Белоруссия">
-        <city count="1700000" id="6" iscap="true" name="Минск"/>
-        <city count="3000000" id="7" iscap="false" name="Витебск"/>
+    <country id="4" name="USA">
+        <city count="1700000" id="6" iscap="false" name="LA"/>
+        <city count="3000000" id="7" iscap="false" name="New York"/>
+        <city count="1700000" id="6" iscap="true" name="LA"/>
+        <city count="3000000" id="7" iscap="false" name="New York"/>
     </country>
 </map>

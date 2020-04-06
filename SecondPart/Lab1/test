@@ -15,3 +15,6 @@
         <city id="7" name="Витебск" iscap="0" count="350000"/>
     </country>
 </map>
+
+
+<!DOCTYPE map SYSTEM “map.dtd”>

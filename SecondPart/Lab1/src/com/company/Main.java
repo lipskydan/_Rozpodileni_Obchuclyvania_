@@ -19,9 +19,9 @@ public class Main {
         a.showCountries();
         a.showCities();
 
-        a.addCountry(3, "Белоруссия");
-        a.addCity(6, "Минск",true, 1700000,3);
-        a.addCity(7, "Витебск",false, 3000000,3);
+        a.addCountry(4, "USA");
+        a.addCity(6, "LA",true, 1700000,4);
+        a.addCity(7, "New York",false, 3000000,4);
 
 
         System.out.println("\n----------------------------------------------------------");
@@ -30,10 +30,39 @@ public class Main {
         a.showCountries();
         a.showCities();
 
+        a.deleteCountry(3);
+
+        System.out.println("\n----------------------------------------------------------");
+        System.out.println("----------------------------------------------------------\n");
+
+        a.showCountries();
+        a.showCities();
+
+        System.out.println("\n----------------------------------------------------------");
+        System.out.println("----------------------------------------------------------\n");
+
+        System.out.println("Country with code " + a.getCountry(2).code + " is " + a.getCountry(2).name);
+
+        System.out.println("\n----------------------------------------------------------");
+        System.out.println("----------------------------------------------------------\n");
+
+        System.out.println("Country with index " + 0 + " is " + a.getCountryInd(0).name);
+
+        System.out.println("\n----------------------------------------------------------");
+        System.out.println("----------------------------------------------------------\n");
+
+        System.out.println("count of countries is " + a.countCountries());
+
         a.saveToFile();
 
 
-
+        try {
+            System.out.println(XMLUtils.validateWithDTDUsingDOM("map.xml"));
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
     }
