@@ -4,13 +4,12 @@ import java.sql.*;
 
 public class Main {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/MAP?serverTimezone=UTC";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "Steps.123";
-
     public static void main(String[] args) throws SQLException {
 
         Map map = new Map("MAP","localhost",3306,"root", "Steps.123");
+
+        System.out.println("-------------------------------------------");
+
         map.showCountries();
         map.showCities(1);
         map.showCities(2);
@@ -18,44 +17,70 @@ public class Main {
 
         System.out.println("-------------------------------------------");
 
+        map.addCountry(1, "RASHA");
+        map.addCountry(2, "USA");
+        map.addCountry(3,"Canada");
+
+        map.showCountries();
+
+        System.out.println("-------------------------------------------");
+
+        map.addCity(1,1,"MOSCOW",11612943,1);
+        map.addCity(2,1,"SOCHI",343334,0);
+        map.addCity(3,2,"NEW YORK",8363710,0);
+        map.addCity(4,2,"LOS ANGELES",56451241,0);
+        map.addCity(5,3,"TORONTO",94234710,1);
+
+        map.showCities(1);
+        map.showCities(2);
+        map.showCities(3);
+        map.showCities(4);
+        map.showCities(5);
+
+        System.out.println("-------------------------------------------");
+
+        map.changeCountryInfo(1,"Russia");
+        map.showCountries();
+
+        map.changeCityInfo(5,3,"TORONTO",94234710,0);
+        map.showCities(3);
+
+        System.out.println("-------------------------------------------");
+
+        map.deleteCity(2);
+        map.deleteCity(1);
+
+        map.deleteCountry(1);
+
+        map.showCountries();
+        map.showCities(1);
+        map.showCities(2);
+        map.showCities(3);
+        map.showCities(4);
+        map.showCities(5);
+
+        System.out.println("-------------------------------------------");
+
         map.findCity(3);
-        map.findCity(1);
-        map.findCity(2);
+        map.findCountry(2);
 
-//        map.changeCountryInfo(1,"Russia");
-
-//        map.deleteCity(2);
-//        map.addCity(2,1,"SOCHI",343334,0);
-//
-//        map.changeCityInfo(2,1,"SOCHI",343334,0);
-//
-//        map.showCountries();
-//        map.showCities(1);
-//        map.showCities(2);
-//        map.showCities(3);
+        System.out.println("-------------------------------------------");
 
 
-//        map.deleteCity(1);
-//        map.deleteCity(2);
-//        map.deleteCountry(1);
-//
-//        map.addCountry(1,"Russia");
-//        map.addCity(1,1,"MOSCOW", 11612943, 1);
-//        map.addCity(2,1,"SOCHI",343334,0);
+        map.deleteCity(3);
+        map.deleteCity(4);
+        map.deleteCity(5);
+        map.deleteCountry(2);
+        map.deleteCountry(3);
 
-//        map.addCountry(2,"USA");
-//        map.addCity(3,2,"NEW YORK",8363710,0);
+        map.showCountries();
+        map.showCities(1);
+        map.showCities(2);
+        map.showCities(3);
+        map.showCities(4);
+        map.showCities(5);
 
-//        map.deleteCity(3);
-//
-//        map.showCountries();
-//        map.showCities(1);
-//        map.showCities(2);
-//        map.showCities(3);
-
-
-
+        System.out.println("-------------------------------------------");
 
     }
-
 }

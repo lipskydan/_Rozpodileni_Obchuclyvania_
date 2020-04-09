@@ -71,7 +71,7 @@ public class Map {
         }
     }
 
-    public void findCountry(int id){
+    public String findCountry(int id){
         String sql = "SELECT ID_CO, NAME FROM COUNTRIES";
 
         try {
@@ -84,13 +84,14 @@ public class Map {
                      String name = rs.getString("NAME");
                      System.out.println("[Map::findCountry()] "+ id + " - " + name);
                      rs.close();
-                     return;
+                     return name;
                  }
             }
             rs.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        return "";
     }
 
     public void changeCountryInfo(int id, String name){
@@ -160,7 +161,7 @@ public class Map {
         }
     }
 
-    public void findCity(int id){
+    public String findCity(int id){
         String sql = "SELECT ID_CI, NAME FROM CITIES";
 
         try {
@@ -173,13 +174,14 @@ public class Map {
                     String name = rs.getString("NAME");
                     System.out.println("[Map::findCity()] "+ id + " - " + name);
                     rs.close();
-                    return;
+                    return name;
                 }
             }
             rs.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        return "";
     }
 
     public void changeCityInfo(int idCity,int idCountry, String name, int count, int isCapital){
@@ -204,7 +206,7 @@ public class Map {
         try
         {
             ResultSet rs = statement.executeQuery(sql);
-            System.out.println("[Map::showCities()] СПИСОК ГОРОДОВ :");
+            System.out.println("[Map::showCities()] СПИСОК ГОРОДОВ " + " :");
             while (rs.next())
             {
                 int idCity = rs.getInt("ID_CI");
