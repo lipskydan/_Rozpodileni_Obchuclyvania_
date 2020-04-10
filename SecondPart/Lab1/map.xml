@@ -1,147 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <map>
     <country id="1" name="Россия">
-        <city count="11000000" id="1" iscap="false" name="Москва"/>
+        <city count="11000000" id="1" iscap="true" name="Москва"/>
         <city count="850000" id="2" iscap="false" name="Владивосток"/>
         <city count="500000" id="3" iscap="false" name="Воронеж"/>
     </country>
     <country id="2" name="Украина">
-        <city count="3000000" id="4" iscap="false" name="Киев"/>
+        <city count="3000000" id="4" iscap="true" name="Киев"/>
         <city count="400000" id="5" iscap="false" name="Севастополь"/>
     </country>
     <country id="4" name="USA">
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="true" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-    </country>
-    <country id="4" name="USA">
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="true" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-    </country>
-    <country id="4" name="USA">
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="true" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-    </country>
-    <country id="4" name="USA">
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
-        <city count="1700000" id="6" iscap="false" name="LA"/>
-        <city count="3000000" id="7" iscap="false" name="New York"/>
         <city count="1700000" id="6" iscap="true" name="LA"/>
         <city count="3000000" id="7" iscap="false" name="New York"/>
     </country>
