@@ -47,7 +47,7 @@ public class Main {
 
         System.out.println("-------------------------------------------");
 
-        map.deleteCity(2);
+        map.deleteCity(4);
         map.deleteCity(1);
 
         map.deleteCountry(1);
@@ -69,6 +69,10 @@ public class Main {
         map.countCities(1);
         map.countCities(2);
         map.countCities(3);
+
+        System.out.println("-------------------------------------------");
+
+        map.showAllCities();
 
         System.out.println("-------------------------------------------");
 
