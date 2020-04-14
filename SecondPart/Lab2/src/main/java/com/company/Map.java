@@ -227,6 +227,27 @@ public class Map {
         }
     }
 
+    public int countCities(int idCountry){
+        String sql = "SELECT ID_CI, ID_CO, NAME, COUNT, ISCAPITAL FROM CITIES";
+        int count = 0;
+        try
+        {
+            ResultSet rs = statement.executeQuery(sql);
+            while (rs.next())
+            {
+                int idCountryTmp = rs.getInt("ID_CO");
+                if (idCountry == idCountryTmp) count++;
+            }
+            rs.close();
+            System.out.println("[Map::showCities()] count cities for country (ID: " + idCountry +") is " + count);
+            return count;
+        } catch (SQLException e) {
+            System.out.println("[Map::showCities()] ОШИБКА при получении списка городов");
+            System.out.println(" >> "+e.getMessage());
+        }
+        return -1;
+    }
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }

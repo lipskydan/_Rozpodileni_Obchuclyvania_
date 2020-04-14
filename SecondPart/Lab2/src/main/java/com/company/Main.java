@@ -66,6 +66,11 @@ public class Main {
 
         System.out.println("-------------------------------------------");
 
+        map.countCities(1);
+        map.countCities(2);
+        map.countCities(3);
+
+        System.out.println("-------------------------------------------");
 
         map.deleteCity(3);
         map.deleteCity(4);
