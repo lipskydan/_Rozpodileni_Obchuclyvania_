@@ -42,10 +42,10 @@ public class Map {
 
         try {
             statement.executeUpdate(sql);
-            System.out.println("[com.company.Map::addCountry()] Страна " + name + " успешно добавлена!");
+            System.out.println("[Map::addCountry()] Страна " + name + " успешно добавлена!");
             return true;
         } catch (SQLException e) {
-            System.out.println("[com.company.Map::addCountry()] ОШИБКА! Страна " + name + " не добавлена!");
+            System.out.println("[Map::addCountry()] ОШИБКА! Страна " + name + " не добавлена!");
             System.out.println(" >> "+e.getMessage());
             return false;
         }
@@ -57,15 +57,15 @@ public class Map {
             int c = statement.executeUpdate(sql);
 
             if (c>0) {
-                System.out.println("[com.company.Map::deleteCountry()] Страна с идентификатором " + id +" успешно удалена!");
+                System.out.println("[Map::deleteCountry()] Страна с идентификатором " + id +" успешно удалена!");
                 return true;
             } else {
-                System.out.println("[com.company.Map::deleteCountry()] Страна с идентификатором " + id +" не найдена!");
+                System.out.println("[Map::deleteCountry()] Страна с идентификатором " + id +" не найдена!");
                 return false;
             }
 
         } catch (SQLException e) {
-            System.out.println("[com.company.Map::deleteCountry()] ОШИБКА при удалении страны с идентификатором " + id + ", в этой стране есть города (удалите сначала их)");
+            System.out.println("[Map::deleteCountry()] ОШИБКА при удалении страны с идентификатором " + id + ", в этой стране есть города (удалите сначала их)");
 //            System.out.println(" >> " + e.getMessage());
             return false;
         }
@@ -78,14 +78,14 @@ public class Map {
             ResultSet rs = statement.executeQuery(sql);
             while (rs.next())
             {
-                 int idTmp = rs.getInt("ID_CO");
+                int idTmp = rs.getInt("ID_CO");
 
-                 if (idTmp == id) {
-                     String name = rs.getString("NAME");
-                     System.out.println("[com.company.Map::findCountry()] "+ id + " - " + name);
-                     rs.close();
-                     return name;
-                 }
+                if (idTmp == id) {
+                    String name = rs.getString("NAME");
+                    System.out.println("[Map::findCountry()] "+ id + " - " + name);
+                    rs.close();
+                    return name;
+                }
             }
             rs.close();
         } catch (SQLException throwables) {
@@ -95,7 +95,7 @@ public class Map {
     }
 
     public void changeCountryInfo(int id, String name){
-        System.out.println("[com.company.Map::changeCountryInfo()]");
+        System.out.println("[Map::changeCountryInfo()]");
 
         String sql1 = "UPDATE COUNTRIES SET NAME = '"+name+"' WHERE ID_CO = '" + id + "'";
         try {
@@ -110,7 +110,7 @@ public class Map {
         try
         {
             ResultSet rs = statement.executeQuery(sql);
-            System.out.println("[com.company.Map::showCountries()] СПИСОК СТРАН:");
+            System.out.println("[Map::showCountries()] СПИСОК СТРАН:");
             while (rs.next())
             {
                 int id = rs.getInt("ID_CO");
@@ -120,7 +120,7 @@ public class Map {
             rs.close();
         } catch (SQLException e)
         {
-            System.out.println("[com.company.Map::showCountries()] ОШИБКА при получении списка стран");
+            System.out.println("[Map::showCountries()] ОШИБКА при получении списка стран");
             System.out.println(" >> "+e.getMessage());
         }
     }
@@ -132,10 +132,10 @@ public class Map {
 
         try {
             statement.executeUpdate(sql);
-            System.out.println("[com.company.Map::addCountry()] Страна " + name + " успешно добавлена!");
+            System.out.println("[Map::addCountry()] Страна " + name + " успешно добавлена!");
             return true;
         } catch (SQLException e) {
-            System.out.println("[com.company.Map::addCountry()] ОШИБКА! Страна " + name + " не добавлена!");
+            System.out.println("[Map::addCountry()] ОШИБКА! Страна " + name + " не добавлена!");
             System.out.println(" >> " + e.getMessage());
             return false;
         }
@@ -147,15 +147,15 @@ public class Map {
             int c = statement.executeUpdate(sql);
 
             if (c>0) {
-                System.out.println("[com.company.Map::deleteCity()] Город с идентификатором " + id +" успешно удалена!");
+                System.out.println("[Map::deleteCity()] Город с идентификатором " + id +" успешно удалена!");
                 return true;
             } else {
-                System.out.println("[com.company.Map::deleteCity()] Город с идентификатором " + id +" не найдена!");
+                System.out.println("[Map::deleteCity()] Город с идентификатором " + id +" не найдена!");
                 return false;
             }
 
         } catch (SQLException e) {
-            System.out.println("[com.company.Map::deleteCity()] ОШИБКА при удалении города с идентификатором " + id);
+            System.out.println("[Map::deleteCity()] ОШИБКА при удалении города с идентификатором " + id);
             System.out.println(" >> " + e.getMessage());
             return false;
         }
@@ -172,7 +172,7 @@ public class Map {
 
                 if (idTmp == id) {
                     String name = rs.getString("NAME");
-                    System.out.println("[com.company.Map::findCity()] "+ id + " - " + name);
+                    System.out.println("[Map::findCity()] "+ id + " - " + name);
                     rs.close();
                     return name;
                 }
@@ -185,7 +185,7 @@ public class Map {
     }
 
     public void changeCityInfo(int idCity,int idCountry, String name, int count, int isCapital){
-        System.out.println("[com.company.Map::changeCountryInfo()]");
+        System.out.println("[Map::changeCountryInfo()]");
 
         String sql1 = "UPDATE CITIES SET NAME = '"+name+"' WHERE ID_CI = '" + idCity + "'";
         String sql2 = "UPDATE CITIES SET ID_CO = '"+idCountry+"' WHERE ID_CI = '" + idCity + "'";
@@ -206,7 +206,7 @@ public class Map {
         try
         {
             ResultSet rs = statement.executeQuery(sql);
-            System.out.println("[com.company.Map::showCities()] СПИСОК ГОРОДОВ " + " :");
+            System.out.println("[Map::showCities()] СПИСОК ГОРОДОВ " + " :");
             while (rs.next())
             {
                 int idCity = rs.getInt("ID_CI");
@@ -216,15 +216,61 @@ public class Map {
                 Boolean isCapital = (rs.getInt("ISCAPITAL") == 1 ? true : false);
 
                 if (idCountry == idCountryTmp)
+                    System.out.println("idCity: " + idCity + "  idCountry:" + idCountryTmp + "   nameCity:" + nameCity + "   count:" + count + "   isCapital:"  + isCapital);
+            }
+
+            rs.close();
+        } catch (SQLException e)
+        {
+            System.out.println("[Map::showCities()] ОШИБКА при получении списка городов");
+            System.out.println(" >> "+e.getMessage());
+        }
+    }
+
+    public void showAllCities(){
+        String sql = "SELECT ID_CI, ID_CO, NAME, COUNT, ISCAPITAL FROM CITIES";
+        try
+        {
+            ResultSet rs = statement.executeQuery(sql);
+            System.out.println("[Map::showAllCities()] СПИСОК ВСЕХ ГОРОДОВ " + " :");
+            while (rs.next())
+            {
+                int idCity = rs.getInt("ID_CI");
+                int idCountryTmp = rs.getInt("ID_CO");
+                String nameCity = rs.getString("NAME");
+                Integer count = rs.getInt("COUNT");
+                Boolean isCapital = (rs.getInt("ISCAPITAL") == 1 ? true : false);
+
                 System.out.println("idCity: " + idCity + "  idCountry:" + idCountryTmp + "   nameCity:" + nameCity + "   count:" + count + "   isCapital:"  + isCapital);
             }
 
             rs.close();
         } catch (SQLException e)
         {
-            System.out.println("[com.company.Map::showCities()] ОШИБКА при получении списка городов");
+            System.out.println("[Map::showCities()] ОШИБКА при получении списка городов");
             System.out.println(" >> "+e.getMessage());
         }
+    }
+
+    public int countCities(int idCountry){
+        String sql = "SELECT ID_CI, ID_CO, NAME, COUNT, ISCAPITAL FROM CITIES";
+        int count = 0;
+        try
+        {
+            ResultSet rs = statement.executeQuery(sql);
+            while (rs.next())
+            {
+                int idCountryTmp = rs.getInt("ID_CO");
+                if (idCountry == idCountryTmp) count++;
+            }
+            rs.close();
+            System.out.println("[Map::countCities()] count cities for country (ID: " + idCountry +") is " + count);
+            return count;
+        } catch (SQLException e) {
+            System.out.println("[Map::showCities()] ОШИБКА при получении списка городов");
+            System.out.println(" >> "+e.getMessage());
+        }
+        return -1;
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
