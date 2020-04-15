@@ -25,14 +25,17 @@ public class Client {
         System.out.println("[Client::sendQueryAndGetResponse()] Отправляем запрос: " + query);
 
         String[] fields = in.readLine().split("#");
-        System.out.print("[Client::sendQueryAndGetResponse()] Получаем ответ: ");
+        System.out.print("[Client::sendQueryAndGetResponse()] Получаем ответ:\n");
 
         try {
             // Код завершения
             int comp_code = Integer.valueOf(fields[0]);
 
             // Результат операции
-            String result = fields[1];
+            String result = " ";
+           for (int i = 1; i < fields.length; i++){
+               result += fields[i] + "\n";
+           }
 
             if (comp_code==0){
                 System.out.println(result + "\n\n");
@@ -112,18 +115,70 @@ public class Client {
         try
         {
             Client client = new Client("localhost",12345);
-            client.addCountry(1,"Ukraine");
-            client.addCountry(2,"Canada");
-            client.addCountry(3,"USA");
-            client.deleteCountry(3);
-            client.addCity(1,1,"Kiev",35345423,1);
-            client.addCity(2,1,"Odessa",34563423,0);
-            client.deleteCity(2);
-            client.editingCity(1,1,"Kiev2",100,1);
-            client.countCitiesInCountry(1);
+
+            System.out.println("-------------------------------------------");
+
             client.showCountries();
             client.showListCities(1);
+            client.showListCities(2);
+            client.showListCities(3);
+
+            System.out.println("-------------------------------------------");
+
+            client.addCountry(1, "Russia");
+            client.addCountry(2, "USA");
+            client.addCountry(3,"Canada");
+
+            client.showCountries();
+
+            System.out.println("-------------------------------------------");
+
+            client.addCity(1,1,"MOSCOW",11612943,1);
+            client.addCity(2,1,"SOCHI",343334,0);
+            client.addCity(3,2,"NEW YORK",8363710,0);
+            client.addCity(4,2,"LOS ANGELES",56451241,0);
+            client.addCity(5,3,"TORONTO",94234710,1);
+
+            client.showListCities(1);
+            client.showListCities(2);
+            client.showListCities(3);
+
+            System.out.println("-------------------------------------------");
+
+            client.countCitiesInCountry(1);
+            client.countCitiesInCountry(2);
+            client.countCitiesInCountry(3);
+
+            System.out.println("-------------------------------------------");
+
+            client.deleteCity(1);
+            client.deleteCity(2);
+
+            client.deleteCountry(1);
+
+            System.out.println("-------------------------------------------");
+
+            client.editingCity(3,2,"NEW YORK",8363710, 1);
+
+            System.out.println("-------------------------------------------");
+
             client.showFullListCities();
+
+            System.out.println("-------------------------------------------");
+
+            client.deleteCity(3);
+            client.deleteCity(4);
+            client.deleteCity(5);
+
+            client.deleteCountry(2);
+            client.deleteCountry(3);
+
+            System.out.println("-------------------------------------------");
+
+            client.showCountries();
+            client.showFullListCities();
+
+            System.out.println("-------------------------------------------");
 
             client.disconnect();
         }catch(IOException e)

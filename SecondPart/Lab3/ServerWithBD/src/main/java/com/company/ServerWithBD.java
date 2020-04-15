@@ -10,6 +10,11 @@ public class ServerWithBD {
     private Socket sock = null;
     private PrintWriter out = null;
     private BufferedReader in = null;
+    private Map map = null;
+
+    ServerWithBD(){
+        map = new Map("MAP","localhost",3306,"root", "Steps.123");
+    }
 
     public void start(int port) throws IOException {
         server = new ServerSocket(port);
@@ -52,7 +57,7 @@ public class ServerWithBD {
                     idCountry = Integer.valueOf(fields[1]);
                     nameCountry = fields[2];
                     System.out.println("[Server::processQuery()] Client want to add country (ID: " + idCountry + " " + "Name: " + nameCountry + ")");
-
+                    map.addCountry(idCountry,nameCountry);
                     response = comp_code+"#"+"Country was added (ID: " + idCountry + " " + "Name: " + nameCountry + ")";
                     System.out.println("[Server::processQuery()] Формируем ответ");
 
@@ -62,7 +67,7 @@ public class ServerWithBD {
                 case 2:
                     idCountry = Integer.valueOf(fields[1]);
                     System.out.println("[Server::processQuery()] Client want to delete country (ID: " + idCountry + ")");
-
+                    map.deleteCountry(idCountry);
                     response = comp_code+"#"+"Country was deleted (ID: " + idCountry + ")";
                     System.out.println("[Server::processQuery()] Формируем ответ");
 
@@ -80,6 +85,8 @@ public class ServerWithBD {
                             " idCountry: " + idCountry + " " + "name: " + nameCity + " " + "count: " + count +
                             " " + "isCapital: " + isCapital + ")");
 
+                    map.addCity(idCity,idCountry,nameCity,count,isCapital);
+
                     response = comp_code+"#"+"City was added (idCity: " + idCity + " idCountry: " + idCountry + " " + "name: "
                             + nameCity + " " + "count: " + count + " " + "isCapital: " + isCapital + ")";
 
@@ -89,6 +96,8 @@ public class ServerWithBD {
                 case 4:
                     idCity = Integer.valueOf(fields[1]);
                     System.out.println("[Server::processQuery()] Client want to delete city (ID: " + idCity + ")");
+
+                    map.deleteCity(idCity);
 
                     response = comp_code+"#"+"City was deleted (ID: " + idCity + ")";
                     System.out.println("[Server::processQuery()] Формируем ответ");
@@ -105,6 +114,8 @@ public class ServerWithBD {
                     isCapital = Integer.valueOf(fields[5]);
                     System.out.println("[Server::processQuery()] Client want to edit city (ID: " + idCity + ")");
 
+                    map.changeCityInfo(idCity,idCountry,nameCity,count,isCapital);
+
                     response = comp_code+"#"+"City was edited (idCity: " + idCity + " idCountry: " + idCountry + " " + "name: "
                             + nameCity + " " + "count: " + count + " " + "isCapital: " + isCapital + ")";
                     System.out.println("[Server::processQuery()] Формируем ответ");
@@ -116,7 +127,7 @@ public class ServerWithBD {
                     idCountry = Integer.valueOf(fields[1]);
                     System.out.println("[Server::processQuery()] Client want to know quantity of cities in country (ID: " + idCountry + ")");
 
-                    response = comp_code+"#"+"Quantity of cities in country (ID: " + idCountry + ") is ";
+                    response = comp_code+"#"+"Quantity of cities in country (ID: " + idCountry + ") is " + map.countCities(idCountry);
                     System.out.println("[Server::processQuery()] Формируем ответ");
 
                     sendResponse(response);
@@ -125,7 +136,8 @@ public class ServerWithBD {
                 case 7:
                     System.out.println("[Server::processQuery()] Client want to see full list of cities");
 
-                    response = comp_code+"#"+"future full list of cities";
+
+                    response = comp_code+"#"+map.showAllCities();
                     System.out.println("[Server::processQuery()] Формируем ответ");
 
                     sendResponse(response);
@@ -135,7 +147,7 @@ public class ServerWithBD {
                     idCountry = Integer.valueOf(fields[1]);
                     System.out.println("[Server::processQuery()] Client want to see list of cities for country (ID: " + idCountry + ")");
 
-                    response = comp_code+"#"+"future full list of cities";
+                    response = comp_code+"#"+map.showCities(idCountry);
                     System.out.println("[Server::processQuery()] Формируем ответ");
 
                     sendResponse(response);
@@ -144,7 +156,7 @@ public class ServerWithBD {
                 case 9:
                     System.out.println("[Server::processQuery()] Client want to see list of countries");
 
-                    response = comp_code+"#"+"future list of countries";
+                    response = comp_code+"#"+map.showCountries();
                     System.out.println("[Server::processQuery()] Формируем ответ");
 
                     sendResponse(response);
