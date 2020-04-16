@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2f68fef5-3b25-4d37-bdf1-0b1fb0062261" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Client/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/Client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/com/company/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/com/myrmi/Map.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/MapImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myrmi/Map.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1ac8Bre5DLLNeZjuGMl81eeBwYQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Server" />
+      <module name="Server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Server" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2f68fef5-3b25-4d37-bdf1-0b1fb0062261" name="Default Changelist" comment="" />
+      <created>1587023388533</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587023388533</updated>
+      <workItem from="1587023394784" duration="7112000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1282" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1587024253261">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="1282" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587024253261" />
+    <state width="661" height="275" key="GridCell.Tab.0.bottom" timestamp="1587030650114">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="661" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587030650114" />
+    <state width="661" height="275" key="GridCell.Tab.0.center" timestamp="1587030650114">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="661" height="275" key="GridCell.Tab.0.center/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587030650114" />
+    <state width="661" height="275" key="GridCell.Tab.0.left" timestamp="1587030650114">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="661" height="275" key="GridCell.Tab.0.left/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587030650114" />
+    <state width="661" height="275" key="GridCell.Tab.0.right" timestamp="1587030650114">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="661" height="275" key="GridCell.Tab.0.right/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587030650114" />
+    <state x="886" y="188" width="1024" height="852" key="SettingsEditor" timestamp="1587025083217">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="886" y="188" width="1024" height="852" key="SettingsEditor/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587025083217" />
+    <state x="538" y="257" width="1372" height="599" key="new project wizard" timestamp="1587024796395">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="538" y="257" width="1372" height="599" key="new project wizard/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587024796395" />
+  </component>
+</project>
