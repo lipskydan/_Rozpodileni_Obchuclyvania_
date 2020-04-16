@@ -30,19 +30,33 @@ public class Client {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public static void addCity(int idCity, int idCountry, String name, int count, int isCapital) throws RemoteException {
-        map.addCity(idCity,idCountry,name,count,isCapital);
+        System.out.println(map.addCity(idCity,idCountry,name,count,isCapital));
     }
 
     public static void deleteCity(int id) throws RemoteException {
-        map.deleteCity(id);
+        System.out.println(map.deleteCity(id));
     }
 
-    public static void showCity(int idCountry) throws RemoteException{
-        map.showCities(idCountry);
+    public static void showCities(int idCountry) throws RemoteException{
+        String[] fields = map.showCities(idCountry).split("-");
+        String result = " ";
+        for (int i = 0; i < fields.length; i++) result += fields[i] + "\n";
+        System.out.println(result);
     }
 
     public static void showAllCities() throws RemoteException{
-        map.showAllCities();
+        String[] fields = map.showAllCities().split("-");
+        String result = " ";
+        for (int i = 0; i < fields.length; i++) result += fields[i] + "\n";
+        System.out.println(result);
+    }
+
+    public static void changeCityInfo(int idCity,int idCountry, String name, int count, int isCapital) throws RemoteException {
+        System.out.println(map.changeCityInfo(idCity,idCountry,name,count,isCapital));
+    }
+
+    public static void countCities(int idCountry) throws RemoteException {
+        System.out.println(map.countCities(idCountry));
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -54,36 +68,66 @@ public class Client {
 
         System.out.println("-----------------------------------------------------------");
 
-        System.out.println(map.showCountries());
+        showCountries();
+        showCities(1);
+        showCities(2);
+        showCities(3);
 
         System.out.println("-----------------------------------------------------------");
 
-        addCountry(1,"Ukraine");
-        addCountry(2,"USA");
+        addCountry(1, "Russia");
+        addCountry(2, "USA");
         addCountry(3,"Canada");
 
-        System.out.println("-----------------------------------------------------------");
-
-        showCountries();
-
-
-        System.out.println("-----------------------------------------------------------");
-
-        deleteCountry(2);
-
         showCountries();
 
         System.out.println("-----------------------------------------------------------");
 
-        deleteCountry(3);
+        addCity(1,1,"MOSCOW",11612943,1);
+        addCity(2,1,"SOCHI",343334,0);
+        addCity(3,2,"NEW YORK",8363710,0);
+        addCity(4,2,"LOS ANGELES",56451241,0);
+        addCity(5,3,"TORONTO",94234710,1);
 
-        showCountries();
+        showCities(1);
+        showCities(2);
+        showCities(3);
+
 
         System.out.println("-----------------------------------------------------------");
+
+        deleteCity(2);
+        deleteCity(1);
 
         deleteCountry(1);
 
         showCountries();
+        showAllCities();
+
+        System.out.println("-----------------------------------------------------------");
+
+        changeCityInfo(3,2,"NEW YORK",1000000,1);
+        countCities(2);
+        countCities(3);
+
+        System.out.println("-----------------------------------------------------------");
+
+        showCountries();
+        showAllCities();
+
+        System.out.println("-----------------------------------------------------------");
+
+        deleteCity(3);
+        deleteCity(4);
+        deleteCity(5);
+
+        deleteCountry(2);
+        deleteCountry(3);
+
+        System.out.println("-----------------------------------------------------------");
+
+        showCountries();
+        showAllCities();
 
         System.out.println("-----------------------------------------------------------");
 

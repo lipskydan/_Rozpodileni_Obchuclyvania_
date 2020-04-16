@@ -2,26 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f68fef5-3b25-4d37-bdf1-0b1fb0062261" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Client/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/Client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/com/company/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/com/myrmi/Map.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/MapImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/myrmi/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/com/company/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/com/company/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/com/myrmi/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/com/myrmi/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/target/classes/com/company/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/target/classes/com/company/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/MapImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/MapImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myrmi/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myrmi/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/MapImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/MapImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myrmi/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myrmi/Map.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Client" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -85,34 +74,62 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587023388533</updated>
-      <workItem from="1587023394784" duration="7112000" />
+      <workItem from="1587023394784" duration="8120000" />
+      <workItem from="1587039410737" duration="1420000" />
     </task>
+    <task id="LOCAL-00001" summary="Add Server with RMI">
+      <created>1587031829316</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587031829316</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add Server with RMI">
+      <created>1587031872241</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587031872241</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add Server with RMI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Server with RMI" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1282" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1587024253261">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="1282" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587024253261" />
-    <state width="661" height="275" key="GridCell.Tab.0.bottom" timestamp="1587030650114">
+    <state x="751" y="164" width="1107" height="911" key="CommitChangelistDialog2" timestamp="1587031872101">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="661" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587030650114" />
-    <state width="661" height="275" key="GridCell.Tab.0.center" timestamp="1587030650114">
+    <state x="751" y="164" width="1107" height="911" key="CommitChangelistDialog2/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587031872101" />
+    <state x="1410" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1587039457890">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="661" height="275" key="GridCell.Tab.0.center/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587030650114" />
-    <state width="661" height="275" key="GridCell.Tab.0.left" timestamp="1587030650114">
+    <state x="1410" y="311" width="424" height="491" key="FileChooserDialogImpl/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587039457890" />
+    <state width="529" height="275" key="GridCell.Tab.0.bottom" timestamp="1587032801618">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="661" height="275" key="GridCell.Tab.0.left/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587030650114" />
-    <state width="661" height="275" key="GridCell.Tab.0.right" timestamp="1587030650114">
+    <state width="529" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587032801618" />
+    <state width="529" height="275" key="GridCell.Tab.0.center" timestamp="1587032801618">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="661" height="275" key="GridCell.Tab.0.right/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587030650114" />
+    <state width="529" height="275" key="GridCell.Tab.0.center/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587032801618" />
+    <state width="529" height="275" key="GridCell.Tab.0.left" timestamp="1587032801618">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="529" height="275" key="GridCell.Tab.0.left/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587032801618" />
+    <state width="529" height="275" key="GridCell.Tab.0.right" timestamp="1587032801618">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="529" height="275" key="GridCell.Tab.0.right/70.27.1850.1053/206.1080.1366.768@70.27.1850.1053" timestamp="1587032801618" />
     <state x="886" y="188" width="1024" height="852" key="SettingsEditor" timestamp="1587025083217">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>

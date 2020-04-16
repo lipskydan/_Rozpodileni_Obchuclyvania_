@@ -156,9 +156,10 @@ implements Map {
                 Integer count = rs.getInt("COUNT");
                 Boolean isCapital = (rs.getInt("ISCAPITAL") == 1 ? true : false);
 
-                if (idCountry == idCountryTmp)
+                if (idCountry == idCountryTmp){
                     System.out.println("idCity: " + idCity + "  idCountry:" + idCountryTmp + "   nameCity:" + nameCity + "   count:" + count + "   isCapital:"  + isCapital);
                     res += "idCity: " + idCity + "  idCountry:" + idCountryTmp + "   nameCity:" + nameCity + "   count:" + count + "   isCapital:"  + isCapital + "-";
+                }
             }
 
             rs.close();
@@ -198,6 +199,45 @@ implements Map {
             res = "[Map::showCities()] ОШИБКА при получении списка городов";
         }
         return res;
+    }
+
+    public String changeCityInfo(int idCity,int idCountry, String name, int count, int isCapital) throws RemoteException {
+        System.out.println("[Map::changeCountryInfo()]");
+
+        String sql1 = "UPDATE CITIES SET NAME = '"+name+"' WHERE ID_CI = '" + idCity + "'";
+        String sql2 = "UPDATE CITIES SET ID_CO = '"+idCountry+"' WHERE ID_CI = '" + idCity + "'";
+        String sql3 = "UPDATE CITIES SET COUNT = '"+count+"' WHERE ID_CI = '" + idCity + "'";
+        String sql4 = "UPDATE CITIES SET ISCAPITAL = '"+isCapital+"' WHERE ID_CI = '" + idCity + "'";
+
+        try {
+            statement.executeUpdate(sql1);
+            statement.executeUpdate(sql2);
+            statement.executeUpdate(sql3);
+            statement.executeUpdate(sql4);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return "[Map::changeCountryInfo()] City (ID: " + idCity + " ) was changed";
+    }
+
+    public String countCities(int idCountry) throws RemoteException  {
+        String sql = "SELECT ID_CI, ID_CO, NAME, COUNT, ISCAPITAL FROM CITIES";
+        int count = 0;
+        try {
+            ResultSet rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                int idCountryTmp = rs.getInt("ID_CO");
+                if (idCountry == idCountryTmp) count++;
+            }
+            rs.close();
+            System.out.println("[Map::countCities()] count cities for country (ID: " + idCountry +") is " + count);
+            return "[Map::countCities()] count cities for country (ID: " + idCountry +") is " + count;
+        } catch (SQLException e) {
+            System.out.println("[Map::showCities()] ОШИБКА при получении списка городов");
+            System.out.println(" >> "+e.getMessage());
+        }
+        return "[Map::showCities()] ОШИБКА при получении списка городов";
     }
 
 }
