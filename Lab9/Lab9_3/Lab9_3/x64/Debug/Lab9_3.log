@@ -1,0 +1,11 @@
+﻿  HtmlBuilder.cpp
+  Lab9_3.cpp
+  TBB Warning: tbb/task_scheduler_init.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.
+  MatrixGenerator.cpp
+  StripesSchema.cpp
+  TBB Warning: tbb/task_scheduler_init.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.
+  Test.cpp
+  TBB Warning: tbb/task_scheduler_init.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.
+  Generating Code...
+  Lab9_3.vcxproj -> C:\Users\Taya\Documents\Projects\DistributedComputing\Lab9_3\x64\Debug\Lab9_3.exe
+          1 file(s) copied.

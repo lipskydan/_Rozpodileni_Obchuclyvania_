@@ -1,0 +1,9 @@
+﻿  Test.cpp
+  TBB Warning: tbb/task_scheduler_init.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.
+  Generating code
+  2 of 415 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    8 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Lab9_3.vcxproj -> C:\Users\Taya\Documents\Projects\DistributedComputing\Lab9_3\x64\Release\Lab9_3.exe
+          1 file(s) copied.
